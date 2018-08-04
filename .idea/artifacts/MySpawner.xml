@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MySpawner">
+    <output-path>$PROJECT_DIR$/out/artifacts/MySpawner</output-path>
+    <root id="archive" name="MySpawner.jar">
+      <element id="module-output" name="EpicSpawner" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,12 @@
+name: MySpawners
+version: 0.1-beta
+main: cn.minezone.myspawners.MySpawnersPlugin
+
+author: mcard
+description: Wow a free plugin.Welcome to use.
+
+depend: [ItemNBTAPI]
+
+commands:
+  myspawner:
+    aliases: [my,ms,mys]

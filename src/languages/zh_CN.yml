@@ -1,0 +1,84 @@
+#谨记：
+#1、所有的可变参数都已经写入默认文本中
+#2、这里的文本只是一个范例，请务必在正式使用前改变他们
+#3、我们为了简洁，信息可能只有【红】、【绿】两种颜色，分别代表FAIL和SUCCESS的结果
+#4、如何阅读这些节点？
+#   第一个单词，代表出现用途
+#   第二到N个单词，为一句话(可能存在语法错误，请谅解)
+
+#当config.yml中PAPI开启时，以下所有配置都支持PAPI变量
+
+loading.load.spawner: '&c共加载{num}个刷怪笼'
+
+command.dont.have.permission: '&c你没有足够的权限'
+command.dont.have.permissions.get.help: '&c你没有足够的权限去查看子命令{sub-command-name}的帮助'
+command.cant.find.sub.command: '&c无法找到子命令{sub-command-name}'
+command.too.many.arguments: '&c{arguments}太大了，最大只能为{max-arguments}'
+command.dont.have.enough.arguments: '&c{arguments}太小了，最少必须为{min-arguments}'
+command.cant.find.any.sub.commands: '&c无法找到任何子命令'
+command.cant.find.this.sub.command: '&c无法找到这个子命令'
+command.sender.must.be.a.player: '&c命令的发送者必须是一个玩家'
+
+arguments.is.not.int: '&c所提供的参数必须为一个整数'
+arguments.must.bigger.than.x: '&c所提供的数值必须比{x}大'
+arguments.must.less.than.x: '&c所提供的数值必须比{x}小'
+arguments.error: '&c参数错误，请检查输入'
+arguments.player.no.online: '&c玩家未在线或不存在'
+
+sub.command.help.gethelp: '&a查看子命令帮助'
+sub.command.help.gethelps:
+  - '&a查看子命令帮助'
+  - '&a参数 子命令名'
+  - '&a可以TAB补全'
+
+sub.command.gui.gethelp: '&a打开GUI列表面板(点击可直接获取)'
+sub.command.gui.gethelps:
+  - '&a打开GUI列表面板(点击可直接获取)'
+  - '&b/ms gui [页码] 如果省略则为1'
+
+sub.command.addspawner.gethelp: '&a增加新的刷怪笼'
+sub.command.addspawner.gethelps:
+  - '&a增加新的刷怪笼'
+  - '&a/ms as [名称(唯一，不建议颜色代码)]'
+
+sub.command.addspawner.repetition: '&c输入的刷怪笼名称重复'
+sub.command.addspawner.create.success: '&a创建成功'
+sub.command.addspawner.create.fail: '&a创建失败'
+
+sub.command.list.gethelp: '&a列出所有已知的刷怪笼'
+sub.command.list.gethelps:
+  - '&a列出所有已知的刷怪笼'
+sub.command.list.all: '&b共展示了{num1}个刷怪笼，其中&a{num2}&b个是启用的，&c{num3}&b个是禁用的'
+
+sub.command.editspawner.gethelp: '&a编辑刷怪笼'
+sub.command.editspawner.gethelps:
+  - '&a/ms es [刷怪笼名称] [编辑类型] [值]'
+  - '&a编辑类型支持：'
+  - '&b icon &aGUI中显示的图标，主手手持该物品；如果你有为他设置Lore或附魔，它也会被展示在/ms give获取到的物品上'
+  - '&b name &a 刷怪笼名称(存储在配置中，必须唯一)'
+  - '&b dn &a刷怪笼名称(支持颜色代码，在以下地方显示：/ms list、刷怪笼上方、/ms give获取到的物品)'
+  - '&b addspawn [生物类型] &a增加一种刷新生物(可按TAB)'
+  - '&b addcmd &a增加一条执行的指令(输入后按提示操作)'
+  - '&b additem &a增加刷新一个物品(主手手持)'
+  - '&b settick &a设置刷新间隔(单位tick，20ticks=1s)'
+  - '&b setpr &a设置玩家激活刷怪笼的距离(中心为刷怪笼)'
+  - '&b setr &a设置刷怪半径(中心为刷怪笼)'
+  - '&b enable &a启用刷怪笼 '
+  - '&b disable &a停用刷怪笼'
+  - '&b type [生物类型](可TAB)'
+
+sub.command.editspawner.no.item: '&c手上必须拿着一个物品 '
+sub.command.editspawner.uncraete: '&c此刷怪笼未创建'
+sub.command.editspawner.set.success: '&a设置成功'
+sub.command.editspawner.entitytype.error: '&c无法找到此怪物类型'
+sub.command.editspawner.input.tip: '&a请打开聊天栏(&bT&a or &bEnter&a)，输入“刷怪笼名称 指令”。例如：“{name} say hi”'
+
+sub.command.give.gethelp: '&a给予一个用户已知刷怪笼'
+sub.command.give.gethelps:
+  - '&c/my give &b[玩家名称/@a] [刷怪笼名称] [数量] &a数量可省略，省略为1'
+sub.command.give.uncraete: '&c此刷怪笼未创建'
+sub.command.give.success: '&c给予成功'
+
+
+
+inventory.gui.title: '&a> 刷怪笼列表 &b{page}/{max-page}'
